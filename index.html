@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <style>
+      .odd {
+        background-color: black;
+        color: white;
+      }
+      .even {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="test">
+      <input type="number" v-model="x" /> <input type="number" v-model="y" />
+      <link rel="stylesheet" href="index.css" />;
+
+      <div>
+        <table class="table">
+          <tbody>
+            <tr v-for="m in y*1">
+              <td
+                v-for="(n) in x*1"
+                :class="[((n+m) % 2) === 0? 'odd'  : 'even']"
+              >
+                {{ n }}x{{ m }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script>
+      va
+    var vue = new Vue({
+      el: "#test",
+      data: {
+        x: 1,
+        y: 1
+      }
+    });
+  </script>
+</html>
